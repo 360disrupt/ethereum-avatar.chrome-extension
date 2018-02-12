@@ -3,32 +3,22 @@
   var image = null
   const selectorImage = ".col-sm-8 .addressIdenticon"//"#avatar-image"
   const selectorAddress = ".col-sm-8 address-field input"//"#to-address"
+  const selectorNetwork = ".dropdown-node > a"
   var network = null
 
   //------------------------------------------------ Helpers --------------------------------------------------------
   checkNetwork = (callback) => {
-    if (typeof web3 !== "undefined" && web3 !== null) {
-      return web3.version.getNetwork(function(err, netId) {
-        switch (netId) {
-          case "1":
-            network = 'main';
-            break;
-          case "2":
-            network = 'morden';
-            break;
-          case "3":
-            network = 'ropsten';
-            break;
-          default:
-            network = null;
-        }
-        console.log("Network is: ", network)
-        return callback();
-      });
-    } else {
-      network = null;
-      return callback();
+    let networkText = document.querySelector(selectorNetwork).innerText
+    if (networkText.indexOf("Network ETH") != -1 ) {
+      network = 'main';
+      document.querySelector(selectorImage).style.filter = "none"
     }
+    else{
+      network = null;
+      document.querySelector(selectorImage).style.filter = "grayscale(100%)"
+    }
+    return callback();
+
   };
 
   function hexToBase64(str) {
@@ -61,7 +51,7 @@
 
   buildAPIUrl = () => {
     let url;
-    if (self.network === 'main') {
+    if (network === 'main') {
       url = "https://api.etherscan.io";
     } else {
       url = "https://ropsten.etherscan.io";
@@ -122,5 +112,6 @@
   }
 
   //------------------------------------------------ Main --------------------------------------------------------
+  checkNetwork()
   resetImage()
 })();

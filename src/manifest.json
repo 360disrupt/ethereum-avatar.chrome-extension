@@ -1,7 +1,7 @@
 {
   "name": "Ethereum Avatar",
   "short_name":"ETH-Avatar",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "manifest_version": 2,
   "default_locale": "en",
   "description": "Display Avatars in MyEtherWallet to avoid sending funds to wrong addresses and it's awesome",
