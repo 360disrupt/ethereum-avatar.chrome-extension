@@ -4,6 +4,9 @@ Avoid sending funds to the wrong address. You can upload an avatar for your wall
 Give your wallet a face!
 
 -------
+Why is the permission access all data required? The extension injects a small script into the myetherwallet page in order to switch the images, you can check out the code on Github: https://github.com/360disrupt/ethereum-avatar.chrome-extension
+
+-------
 This extension is under the MIT license:
 
 Copyright 2018 Eisbach Solutions UG (haftungsbeschränkt)
