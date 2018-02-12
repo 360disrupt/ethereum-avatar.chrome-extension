@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Ethereum Avatar",
+    "description": "Display Avatars in MyEtherWallet to avoid sending funds to wrong addresses and it's awesome."
+  },
+  "appDesc": {
+    "message": "Give your wallet a face.",
+    "description":"Display Avatars in MyEtherWallet to avoid sending funds to wrong addresses and it's awesome."
+  }
+}
