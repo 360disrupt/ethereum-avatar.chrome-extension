@@ -87,7 +87,9 @@
           })
 
           if (userTx.length){
-            image = DOMPurify.sanitize(userTx[userTx.length-1].input)
+            //console.info(userTx)
+            //console.info(userTx[0])
+            image = DOMPurify.sanitize(userTx[0].input)
             let converted = "url('data:image/jpeg;base64," + hexToBase64(image) + "')"
             document.querySelector(selectorImage).style.background = "center/cover "+ converted
           }
