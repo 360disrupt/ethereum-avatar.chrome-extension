@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {},
   "scripts": {
-    "compile": "gulp",
+    "compile": "gulp build",
     "pack":"zip -r ethereum-avatar.zip dist/"
   },
   "devDependencies": {

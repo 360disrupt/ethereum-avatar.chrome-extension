@@ -28,3 +28,7 @@ gulp.task('watch', ['scripts', 'misc', 'json', 'images', 'locales'] ,function ()
     'src/{,*/}*.json'
     ], ['scripts', 'misc', 'json', 'locales']);
 });
+
+gulp.task('build', ['scripts', 'misc', 'json', 'images', 'locales'] ,function () {
+  return
+});
